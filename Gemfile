@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.beta1'
 gem 'pg'
 
+
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'
@@ -11,9 +12,14 @@ end
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem 'faker'
 end
 
 gem 'jquery-rails'
+gem 'haml-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
+gem 'unicorn'
+gem 'foreman'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

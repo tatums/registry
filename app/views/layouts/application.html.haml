@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Tatum and Leslie
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        =render 'layouts/navigation'
+
+    .container-fluid
+      .row-fluid
+        .span3
+          = yield :left_column
+        .span9
+          = yield
+
+
+      %hr
+      %footer
+        %p © Company 2013
+
+

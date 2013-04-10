@@ -11,14 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130410022202) do
+ActiveRecord::Schema.define(version: 20130410024036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "contributions", force: true do |t|
+    t.decimal  "amount",      precision: 8, scale: 2
+    t.integer  "offering_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contributions", ["offering_id"], name: "index_contributions_on_offering_id"
+
   create_table "offerings", force: true do |t|
     t.string   "title"
     t.string   "description"
+    t.integer  "portions"
     t.decimal  "amount",      precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"

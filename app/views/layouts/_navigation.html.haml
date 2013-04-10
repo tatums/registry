@@ -1,0 +1,15 @@
+.container-fluid
+  %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+  %a.brand{:href => "#"} Tatum & Leslie
+  .nav-collapse.collapse
+    %p.navbar-text.pull-right
+      Logged in as
+      %a.navbar-link{:href => "#"} Username
+    %ul.nav
+      %li.active
+        = link_to 'Home', root_path
+      %li
+        = link_to 'Offers', offerings_path

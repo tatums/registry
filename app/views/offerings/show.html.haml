@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @offering.title
+%p
+  %strong Description:
+  = @offering.description
+%p
+  %strong Amount:
+  = number_to_currency @offering.amount
+
+%ul
+  - @offering.contributions.each do |contribution|
+    %li= number_to_currency contribution.amount
+
+= link_to 'Edit', edit_offering_path(@offering)
