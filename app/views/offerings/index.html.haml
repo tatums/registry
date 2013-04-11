@@ -1,0 +1,8 @@
+%ul
+  - @offerings.each do |offering|
+    %li
+      = link_to offering.title, offering
+      = link_to offering.description, offering
+      = number_to_currency offering.amount
+%br
+= link_to 'New Offering', new_offering_path

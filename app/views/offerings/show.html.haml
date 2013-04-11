@@ -14,3 +14,4 @@
     %li= number_to_currency contribution.amount
 
 = link_to 'Edit', edit_offering_path(@offering)
+= link_to 'Destroy', @offering, method: :delete, data: { confirm: 'Are you sure?' }

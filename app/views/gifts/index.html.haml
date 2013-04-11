@@ -1,0 +1,8 @@
+%ul
+  - @gifts.each do |gift|
+    %li
+      = link_to gift.title, gift
+      = link_to gift.description, gift
+      = number_to_currency gift.amount
+%br
+= link_to 'New Offering', new_gift_path
