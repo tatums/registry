@@ -12,6 +12,7 @@ end
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem 'faker'
+  gem 'pry-rails'
 end
 
 gem 'jquery-rails'
@@ -19,6 +20,9 @@ gem 'haml-rails'
 gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
 gem 'unicorn'
 gem 'foreman'
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mini_magick'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

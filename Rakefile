@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Wedding::Application.load_tasks
+Registry::Application.load_tasks

@@ -1,0 +1,9 @@
+%hr
+%footer
+  %p
+    © Tatum & Leslie
+    = Date.today.year
+  %p
+    -if current_user
+      = link_to 'Logout', logout_path(current_user), method: :delete
+      = current_user.full_name

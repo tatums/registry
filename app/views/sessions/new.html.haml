@@ -1,0 +1,7 @@
+%h1 Who are you?
+%p
+  = form_tag sessions_path do
+    = text_field_tag :email, params[:email], placeholder: 'Email'
+    = submit_tag 'Login'
+
+%p= link_to 'Register', register_path

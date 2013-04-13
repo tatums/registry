@@ -1,0 +1,26 @@
+= form_for @gift, :html => {:multipart => true} do |f|
+
+  - if @gift.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@gift.errors.count, "error")
+        prohibited this offering from being saved:
+      %ul
+        - @gift.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = image_tag(@gift.image_url) if @gift.image
+    = f.file_field :image
+
+  .field
+    = f.text_field :title, placeholder: 'Title'
+  .field
+    =f.text_field :description, placeholder: 'Description'
+  .field
+    =f.text_field :amount, placeholder: '$$ Amount'
+  .field
+    =f.text_field :portions, placeholder: 'Portions'
+  .actions
+    =f.submit 'Login'
+

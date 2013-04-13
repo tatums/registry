@@ -1,3 +1,5 @@
-# class Contribution < ActiveRecord::Base
-#   belongs_to :offering
-# end
+class Contribution
+  include Mongoid::Document
+
+  belongs_to :gift
+end

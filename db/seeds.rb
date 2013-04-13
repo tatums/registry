@@ -5,3 +5,29 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Gift.destroy_all
+Gift.create(title: 'Hotel',
+            description: 'Bora Borra here we come.',
+            amount: 2200.00,
+            portions: 25)
+
+Gift.create(title: 'Flight',
+            description: 'American Airlines',
+            amount: 1600.00,
+            portions: 10)
+
+Gift.create(title: 'Scuba Diving',
+            description: 'We wana scuba dive while on our honeymoon',
+            amount: 1600.00,
+            portions: 25)
+
+Gift.create(title: 'Dream Home',
+            description: 'We want to buy our dream home',
+            amount: 1000000.00,
+            portions: 1000000)
+
+User.destroy_all
+User.create(first:'Tatum',
+            last: 'Szymczak',
+            email: 'tatum@ashlandstudios.com')
