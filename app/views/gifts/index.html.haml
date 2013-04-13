@@ -1,6 +1,7 @@
 %ul
   - @gifts.each do |gift|
     %li
+      = image_tag gift.image.thumb.url
       = link_to gift.title, gift
       = link_to gift.description, gift
       = number_to_currency gift.amount
