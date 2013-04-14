@@ -5,20 +5,17 @@
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Reenie+Beanie'
   %body
-
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        =render 'layouts/navigation'
-
-    .container-fluid
-      .row-fluid
-        .span3
-          = yield :left_column
-        .span9
+    .wrapper
+      .container-row.heading-row
+        .heading
+          =render 'layouts/heading'
+      .container-row
+        .navigation
+          =render 'layouts/side_navigation'
+        .content-body
           = yield
-
-      =render 'layouts/footer'
-
-
-
+      .container-row
+        .footer
+          =render 'layouts/footer'

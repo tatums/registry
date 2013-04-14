@@ -1,0 +1,1 @@
+WEDDING_DATE = Date.new(2013,9,7)

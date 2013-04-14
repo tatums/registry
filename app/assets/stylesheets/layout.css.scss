@@ -1,0 +1,58 @@
+
+
+div.container-row {
+
+  @include outer-container;
+
+  .navigation {
+    @include span-columns(3);
+  }
+
+  .content-body {
+    @include span-columns(9);
+
+    .bio-row {
+      overflow: auto;
+      .bio {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+    }
+
+  }
+
+}
+
+
+.heading{
+
+}
+body{
+  // @include background(image-url('head-bg.gif'), center no-repeat orange scroll);
+  background-position: -350px -50px;
+  background-image: image-url('head-bg.gif');
+  background-repeat: no-repeat;
+}
+
+.heading-row{
+    height:200px;
+
+    .title{
+
+
+      text-align:center;
+      color:white;
+      h1{
+        font-size: 6em;
+        font-family: 'Reenie Beanie', cursive;
+        margin:0;
+        padding:0;
+      }
+
+    }
+
+
+
+}
+
+

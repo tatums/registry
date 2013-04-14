@@ -1,3 +1,40 @@
-// Place all the styles related to the gifts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #53bcd4;
+
+
+ul{
+  list-style: none;
+}
+
+
+
+.action input{
+  @include button;
+}
+
+
+.navigation {
+
+  a{
+    display: block;
+    color: $primary-color;;
+    padding: 12px 20px 12px 20px;
+    border-color: $primary-color;
+    border-bottom: 1px dotted;
+  }
+  a:hover{ color:#d61835; }
+
+  ul li{
+
+  }
+}
+
+
+img{
+  // padding: .5em .5em 3em .5em;
+
+  // @include box-shadow(0 0 7px 3px hsla(0, 0%, 0%, 0.25));
+}
+
+body{
+  // @include background-image( image-url('head-bg.gif') );
+}

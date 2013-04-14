@@ -1,0 +1,14 @@
+
+body {
+  font-family: 'proxima-nova', "Helvetica Neue", 'Helvetica','Arial','sans-serif';
+
+  font-size: 15px;
+  line-height: 20px;
+  color: #333;
+}
+h1 {
+  font-size: golden-ratio(14px,  1);
+}
+h2 {
+  font-size: golden-ratio(12px,  1);
+}
