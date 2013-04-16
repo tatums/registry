@@ -79,14 +79,10 @@ test:
         max_retries: 1
         retry_interval: 0
 
-# production:
-#   sessions:
-#     default:
-#       database: <%= ENV['MONGOID_DATABASE'] %>
-#       hosts:
-#         - <%= ENV['MONGOLAB_HOST_PORT'] %>
-#       username: <%= ENV['MONGOID_USERNAME'] %>
-#       password: <%= ENV['MONGOID_PASSWORD'] %>
-#       options:
-#         skip_version_check: true
-#         safe: true
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
