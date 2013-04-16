@@ -26,6 +26,7 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mini_magick'
 gem 'heroku'
+gem "figaro"
 
 gem 'neat'
 gem 'bourbon'
