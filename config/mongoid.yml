@@ -82,4 +82,12 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      hosts:
+        - - <%= ENV['MONGOID_HOST'] %>
+          - <%= ENV['MONGOID_PORT'] %>
+      username: <%= ENV['MONGOID_USERNAME'] %>
+      password: <%= ENV['MONGOID_PASSWORD'] %>
+      database: <%= ENV['MONGOID_DATABASE'] %>
+      options:
+        skip_version_check: true
+        safe: true
