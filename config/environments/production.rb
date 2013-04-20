@@ -23,6 +23,11 @@ Registry::Application.configure do
   config.serve_static_assets = true
 
 
+  config.assets.initialize_on_precompile = false
+    # On config/application.rb forcing your application to not access the DB
+    #  or load models when precompiling your assets.
+
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
@@ -78,4 +83,5 @@ Registry::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.action_mailer.default_url_options = { :host => 'tatumandleslie.com' }
 end

@@ -27,6 +27,7 @@ gem 'fog'
 gem 'mini_magick'
 gem 'heroku'
 gem "figaro"
+gem 'devise'
 
 gem 'neat'
 gem 'bourbon'
