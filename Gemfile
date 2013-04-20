@@ -1,7 +1,6 @@
 ruby "2.0.0"
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.0.0.beta1'
 gem "mongoid", github: "mongoid/mongoid"
 
@@ -24,6 +23,7 @@ gem 'unicorn'
 gem 'foreman'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'fog'
 gem 'mini_magick'
 gem 'heroku'
 gem "figaro"
