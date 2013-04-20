@@ -1,5 +1,3 @@
-
-
 div.container-row {
 
   @include outer-container;
@@ -24,21 +22,24 @@ div.container-row {
 }
 
 
-.heading{
+.heading{ }
+
+body{
+  background-image: image-url('bg.png');
 
 }
-body{
-  // @include background(image-url('head-bg.gif'), center no-repeat orange scroll);
+
+.wrapper{
   background-position: -350px -50px;
   background-image: image-url('head-bg.gif');
   background-repeat: no-repeat;
+
 }
 
 .heading-row{
     height:200px;
 
     .title{
-
 
       text-align:center;
       color:white;
@@ -51,8 +52,9 @@ body{
 
     }
 
-
-
 }
 
-
+// .welcome-img{@include span-columns(12);}
+// .welcome-body{
+//   @include span-columns(3);
+// }

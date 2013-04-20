@@ -6,6 +6,9 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Reenie+Beanie'
+    %script{:src => "http://maps.google.com/maps/api/js?sensor=true", :type => "text/javascript"}
+    = javascript_include_tag :gmaps
+
   %body
     .wrapper
       .container-row.heading-row

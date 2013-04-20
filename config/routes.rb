@@ -2,7 +2,7 @@ Registry::Application.routes.draw do
 
 
 
-  root to: 'gifts#index'
+  root to: 'pages#welcome'
 
   ##PAGES
   get 'welcome' =>                  'pages#welcome',                  as: :welcome

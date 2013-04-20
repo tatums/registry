@@ -1,11 +1,25 @@
 %h1 Directions
 
-
-
 %p
-  6918 Oak Avenue
+  =link_to '6918 Oak Avenue', 'https://maps.google.com/?q=6918+Oak+Ave,+Gary,+IN,+46403'
   %br
-  Gary, Indiana 46403
+  =link_to 'Gary, Indiana 46403', 'https://maps.google.com/?q=6918+Oak+Ave,+Gary,+IN,+46403'
 
+#map
 
-INSRET GOOGLE MAP HERE
+:javascript
+  $(document).ready(function(){
+    var map = new GMaps({
+      div: '#map',
+      lat: 41.619557,
+      lng: -87.257334
+    });
+
+  map.addMarker({
+    lat: 41.619557,
+    lng: -87.257334,
+    title: 'Aquatorium'
+  });
+
+  });
+
