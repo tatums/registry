@@ -15,4 +15,8 @@ class Gift
     amount / portions
   end
 
+  def remaining_portions
+    nil
+  end
+
 end

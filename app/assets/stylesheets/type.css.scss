@@ -1,14 +1,45 @@
+$body-font: 'Antic Didone', serif;
+$heading-font: 'Dancing Script', cursive;
+$special-red: #d61835;
+
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Cherry Swash', cursive;
+// font-family: 'Antic Didone', serif;
+// font-family: 'Dancing Script', cursive;
+
+// font-family: 'proxima-nova', "Helvetica Neue", 'Helvetica','Arial','sans-serif';
+// font-family: 'Reenie Beanie', cursive;
 
 body {
-  font-family: 'proxima-nova', "Helvetica Neue", 'Helvetica','Arial','sans-serif';
-
-  font-size: 15px;
-  line-height: 20px;
-  color: #333;
+      font-family: $body-font ;
+      // font-size: 15px;
+      // line-height: 20px;
+      // color: #333;
 }
 h1 {
-  font-size: golden-ratio(14px,  1);
+
+    font-family: $heading-font ;
+    font-size: golden-ratio(14px,  1);
 }
 h2 {
+  font-family: $heading-font ;
   font-size: golden-ratio(12px,  1);
+}
+
+.title{
+  text-align:center;
+  color:white;
+  h1{
+    color:$special-red;
+    font-size: 2.5em;
+    font-family: $heading-font ;
+    margin:0;
+    padding:0;
+  }
+
+}
+
+.navigation li a{
+  font-family: $heading-font ;
+  font-size: 1.3em;
 }

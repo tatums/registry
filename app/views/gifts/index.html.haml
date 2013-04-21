@@ -1,9 +1,20 @@
-%ul
-  - @gifts.each do |gift|
-    %li
-      = link_to image_tag(gift.image.thumb.url), gift
-      = link_to gift.title, gift
-      = link_to gift.description, gift
-      = number_to_currency gift.amount
-%br
-= link_to 'New Offering', new_gift_path
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+      %th Title
+      %th Description
+      %th Requested
+      %th Remaining
+      %th Amount
+  %tbody
+    - @gifts.each do |gift|
+      %tr
+        %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
+        %td= link_to gift.title, gift
+        %td= link_to gift.description, gift
+        %td= gift.portions
+        %td= gift.remaining_portions
+        %td= number_to_currency gift.portion_size
+  / %br
+  / = link_to 'New Offering', new_gift_path
