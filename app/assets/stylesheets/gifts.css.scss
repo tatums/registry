@@ -51,7 +51,7 @@ ul{
 
 }
 
-img {
+img.fancy {
   padding:5px;
   border:1px solid #ccc;
   @include border-top-radius(5px);

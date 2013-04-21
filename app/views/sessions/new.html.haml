@@ -1,28 +1,23 @@
-%h1 Tatum & Leslie
+%h1 Login
 
 .login
-  %p
+  %button
     %i.icon-facebook-sign.icon-2x
     = link_to "Sign in with Facebook", "/auth/facebook"
 
-.login
-  %p
+  %button
     %i.icon-twitter-sign.icon-2x
     = link_to "Sign in with Twitter", "/auth/twitter"
 
-
 %hr
 
-
 .login
-  %h1 Login
+
   %p
     = form_tag sessions_path do
       = text_field_tag :email, params[:email], placeholder: 'Email'
       = text_field_tag :password, params[:password], placeholder: 'Password'
       = submit_tag 'Login', class: :button
-
-%hr
 
 .register
   %p= link_to 'Register', register_path
