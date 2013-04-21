@@ -1,3 +1,7 @@
+
+$primary-color: #53bcd4;
+$hover-color:#d61835;
+
 div.container-row {
 
   @include outer-container;
@@ -21,40 +25,70 @@ div.container-row {
 
 }
 
-
-.heading{ }
-
-body{
-  background-image: image-url('bg.png');
-
+.login{
+  @include span-columns(6);
+  @include shift(3);
+  text-align: center;
 }
 
+.register{
+  @include span-columns(6);
+  @include shift(3);
+  text-align: center;
+}
+
+.body{margin-top: 2.5em;}
+
+body {
+  background-image: image-url('bg.png');
+  }
+
 .wrapper{
-  background-position: -350px -50px;
-  background-image: image-url('head-bg.gif');
+  @include background-image(  linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 20%, transparent 80%),
+                              linear-gradient($primary-color, darken($primary-color, 10%)));
+  position: absolute;
+  height:73px;
+  width:100%;
+    @include box-shadow(0px 0px 0px 2px hsla(0, 10%, 10%, 0.20));
+}
+// .wrapper{
+//     // @include background-image(  linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 20%, transparent 80%),
+//     //                            linear-gradient($primary-color, darken($primary-color, 5%)));
+//   // @include background-image(image-url('flower.png'));
+//   // background-repeat: no-repeat;
+//   // background-position: 0 -80px;
+// }
+
+.flower{
+  position: absolute;
+
+  @include background-image(image-url('flower2.png'));
   background-repeat: no-repeat;
+  background-position: 30px -40px ;
+
+  height:120px;
+  width:100%;
+}
+
+.body-content{
 
 }
 
 .heading-row{
-    height:200px;
-
-    .title{
-
-      text-align:center;
-      color:white;
-      h1{
-        font-size: 6em;
-        font-family: 'Reenie Beanie', cursive;
-        margin:0;
-        padding:0;
-      }
-
-    }
+  position: relative;
+  z-index: 1;
 
 }
 
-// .welcome-img{@include span-columns(12);}
-// .welcome-body{
-//   @include span-columns(3);
-// }
+.title{
+  text-align:center;
+  color:white;
+  h1{
+    font-size: 2.5em;
+    font-family: 'Reenie Beanie', cursive;
+    margin:0;
+    padding:0;
+  }
+
+}
+

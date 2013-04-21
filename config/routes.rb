@@ -32,6 +32,7 @@ Registry::Application.routes.draw do
 
   resources :sessions, only: [:create]
 
+  match "/auth/:provider/callback" => "sessions#create", via: :get
 
 
 

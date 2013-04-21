@@ -6,15 +6,6 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-
-    .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-
-
-    .container-fluid
-      .row-fluid
-        .span3
-          = yield :left_column
-        .span9
-          = yield
+    .container-row
+      = yield
 

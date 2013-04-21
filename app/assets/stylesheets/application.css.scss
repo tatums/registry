@@ -12,15 +12,18 @@
  *= require font-awesome
  */
 
-//$visual-grid: true;
-//$visual-grid-color: #FF0000;
+// $visual-grid: true;
+// $visual-grid-color: #FF0000;
 
   @import "bourbon";
   @import "neat";
 
   @import "foundation/foundation";
   @import "layout";
+
   @import "type";
-  @import "errors";
   @import "gifts";
   @import "pages";
+  @import "errors";
+
+

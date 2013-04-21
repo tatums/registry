@@ -27,7 +27,9 @@ gem 'fog'
 gem 'mini_magick'
 gem 'heroku'
 gem "figaro"
-gem 'devise'
+gem "omniauth"
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 gem 'neat'
 gem 'bourbon'

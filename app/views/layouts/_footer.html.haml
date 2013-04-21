@@ -4,6 +4,11 @@
     © Tatum & Leslie
     = Date.today.year
   %p
+
     -if current_user
+      Logged in as:
+      = current_user.full_name + " | "
       = link_to 'Logout', logout_path(current_user), method: :delete
-      = current_user.full_name
+
+    -else
+      = link_to 'Login', login_path

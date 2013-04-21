@@ -22,12 +22,6 @@ Registry::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = true
 
-
-  config.assets.initialize_on_precompile = false
-    # On config/application.rb forcing your application to not access the DB
-    #  or load models when precompiling your assets.
-
-
   # Compress JavaScripts and CSS.
   config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
