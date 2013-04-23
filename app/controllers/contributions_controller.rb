@@ -4,6 +4,7 @@ class ContributionsController < ApplicationController
   def create
     @cart = find_cart
     @cart.convert(current_user) if current_user
+    flash[:notice] = 'stuff'
   end
 
 end

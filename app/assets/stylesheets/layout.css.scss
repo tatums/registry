@@ -54,7 +54,7 @@ div.container-row {
   width:100%;
 }
 
-.navigation, .heading-row{
+.alert, .navigation, .heading-row{
   position: relative;
   z-index: 1;
 }
@@ -135,4 +135,11 @@ img.fancy {
   @include border-left-radius(5px);
   @include border-right-radius(5px);
   @include box-shadow(0 0 1px 1px hsla(0, 0%, 0%, 0.10));
+}
+
+
+
+
+.alert-box{
+  margin-top:3em;
 }

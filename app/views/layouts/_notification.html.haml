@@ -1,0 +1,11 @@
+- if notice.present?
+  .alert.fade.in.success
+    %button{type: 'button', class: 'close', 'data-dismiss' => 'alert'}
+      &times;
+    =notice
+
+- if alert.present?
+  .alert.fade.in.warning
+    %button{type: 'button', class: 'close', 'data-dismiss' => 'alert'}
+      &times;
+    =alert
