@@ -1,8 +1,9 @@
 class GiftsController < ApplicationController
   respond_to :html
-  before_action :require_user
+
 
   def index
+    @cart = find_cart
     @gifts = Gift.all.to_a
   end
 

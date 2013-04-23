@@ -1,20 +1,29 @@
-%table.table.table-striped
-  %thead
-    %tr
-      %th
-      %th Title
-      %th Description
-      %th Requested
-      %th Remaining
-      %th Amount
-  %tbody
-    - @gifts.each do |gift|
+/##TODO Fix me - I'm Hackish
+=form_for([@cart, Item.new]) do |form|
+
+  %table.table.table-striped
+    %thead
       %tr
-        %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
-        %td= link_to gift.title, gift
-        %td= link_to gift.description, gift
-        %td= gift.portions
-        %td= gift.remaining_portions
-        %td= number_to_currency gift.portion_size
-  / %br
-  / = link_to 'New Offering', new_gift_path
+        %th
+        %th Title
+        %th Description
+        %th Requested
+        %th Remaining
+        %th Amount
+        %th Amount
+    %tbody
+
+      - @gifts.each do |gift|
+
+        = form.fields_for 'gifts[]', gift do |gift_field|
+          %tr
+            %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
+            %td= link_to gift.title, gift
+            %td= link_to gift.description, gift
+            %td= gift.portions
+            %td= helper_portions_for(gift)
+            %td= number_to_currency gift.portion_size
+
+            %td= helper_field_for(gift_field, gift)
+
+  =submit_tag 'Continue'

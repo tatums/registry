@@ -28,8 +28,8 @@ Gift.create(title: 'Beach',
 
 Gift.create(title: 'Dream Home',
             description: 'We want to buy our dream home',
-            amount: 1000000.00,
-            portions: 1000000,
+            amount: 50000.00,
+            portions: 500,
             image: File.open( "#{Rails.root}/public/seed_photos/home.jpg"))
 
 # User.destroy_all

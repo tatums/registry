@@ -15,14 +15,24 @@
 // $visual-grid: true;
 // $visual-grid-color: #FF0000;
 
+
+$body-font: 'Antic Didone', serif;
+$heading-font: 'Dancing Script', cursive;
+$special-red: #d61835;
+
+$primary-color: #53bcd4;
+$hover-color:#d61835;
+
+
+
   @import "bourbon";
   @import "neat";
 
   @import "foundation/foundation";
   @import "layout";
 
+
   @import "type";
-  @import "gifts";
   @import "pages";
   @import "errors";
   @import "bs-tables";

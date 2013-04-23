@@ -34,10 +34,13 @@ Registry::Application.routes.draw do
 
   match "/auth/:provider/callback" => "sessions#create", via: :get
 
+  resources :carts, only: [:none] do
+    resources :items, shallow: true
+    resources :contributions
+  end
+  resources :contributions, only: [:create]
 
-
-
-
+  resource :checkout
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

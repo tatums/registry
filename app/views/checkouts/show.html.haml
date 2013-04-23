@@ -1,0 +1,30 @@
+%table.table.table-striped
+
+  %thead
+    %tr
+      %th
+      %th Title
+      %th Quantity
+      %th SubTotal
+      %th
+
+  %tbody
+    - @cart.items.each do |item|
+      %tr
+        %td= link_to image_tag(item.gift.image.thumb.url, class: :fancy), item.gift
+        %td= item.gift.title
+        %td= item.quantity
+        %td= number_to_currency(item.sub_total)
+        %td= button_to 'x', item, method: :delete, data: { confirm: 'Are you sure?' }
+
+  %tfoot
+    %tr
+      %th
+      %th
+      %th Grand Total
+      %th= number_to_currency( @cart.items.map(&:sub_total).sum )
+
+=form_for(Contribution.new, remote: true) do |form|
+
+  =form.submit 'Create'
+

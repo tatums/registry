@@ -1,6 +1,6 @@
 %h1 Login
 
-.login
+.login-section
   %button
     %i.icon-facebook-sign.icon-2x
     = link_to "Sign in with Facebook", "/auth/facebook"
@@ -11,7 +11,7 @@
 
 %hr
 
-.login
+.login-section
 
   %p
     = form_tag sessions_path do
@@ -19,7 +19,7 @@
       = text_field_tag :password, params[:password], placeholder: 'Password'
       = submit_tag 'Login', class: :button
 
-.register
+.login-section
   %p= link_to 'Register', register_path
 
 

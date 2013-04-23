@@ -1,10 +1,5 @@
-$primary-color: #53bcd4;
-$hover-color:#d61835;
-
-
 
 div.container-row {
-
   @include outer-container;
 
   .navigation {
@@ -26,66 +21,118 @@ div.container-row {
 
 }
 
-.login{
+.login-section{
   @include span-columns(6);
   @include shift(3);
   text-align: center;
-}
 
-.register{
-  @include span-columns(6);
-  @include shift(3);
-  text-align: center;
-}
-
-
-
-.body{margin-top: 3.5em;}
-
-body {
-  background-image: image-url('bg.png');
+  button a{
+    color:white;
   }
+}
+
+
 
 .wrapper{
   @include background-image(  linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 20%, transparent 80%),
-                              linear-gradient($primary-color, darken($primary-color, 10%)));
-  position: absolute;
-  height:100px;
-  width:100%;
-    @include box-shadow(0px 0px 0px 2px hsla(0, 10%, 10%, 0.20));
+                              linear-gradient($primary-color, darken($primary-color, 4%)));
+  @include box-shadow(0px 0px 0px 2px hsla(0, 10%, 10%, 0.20));
 }
 
 
 .flower{
   position: absolute;
-
   @include background-image(image-url('flower2.png'));
   background-repeat: no-repeat;
-  // background-position: 30px -40px ;
-
   height:170px;
   width:100%;
 }
 
-.body-content{
-
+.wrapper{
+  position: absolute;
+  height:100px;
+  width:100%;
 }
 
-.heading-row{
+.navigation, .heading-row{
   position: relative;
   z-index: 1;
+}
 
+.login button{
+  a{ color:white; }
+}
+
+body {
+  background-image: image-url('bg.png');
+}
+
+.body {
+    margin-top: 3.5em;
+}
+
+ul{
+  list-style: none;
 }
 
 
-.login button{
+
+.action input{
+  @include button;
+}
+
+
+.navigation {
 
   a{
-    color:white;
+    display: block;
+    color: $primary-color;;
+    padding: 12px 20px 12px 20px;
+    border-color: $primary-color;
+    border-bottom: 1px dotted;
+  }
+  a:hover{
+    color:$hover-color;
+    border-color: $primary-color;
+  }
+
+  ul li{
+
   }
 }
 
-.navigation{
-  position: relative;
-  z-index: 1;
+
+.navigation li.current a{
+  color:$special-red;
+  border-color: $primary-color;
+}
+
+
+#gmap img{max-width: inherit;}
+
+#gmap {
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  @include box-shadow(1px 1px 0px 0px hsla(0, 0%, 0%, 0.10));
+
+  padding:5px;
+  border:1px solid #ccc;
+
+  background: #58B;
+  display: block;
+  height:400px;
+  width:100%;
+
+}
+
+img.fancy {
+  padding:5px;
+  border:1px solid #ccc;
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  @include box-shadow(0 0 1px 1px hsla(0, 0%, 0%, 0.10));
 }
