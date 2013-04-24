@@ -1,7 +1,5 @@
 Registry::Application.routes.draw do
 
-
-
   root to: 'pages#welcome'
 
   ##PAGES
@@ -20,8 +18,6 @@ Registry::Application.routes.draw do
   get 'faq' =>                      'pages#faq',                      as: :faq
   get 'contact_us' =>               'pages#contact_us',               as: :contact_us
 
-
-
   resources :gifts
 
   get 'register' => 'users#new', as: :register
@@ -38,9 +34,9 @@ Registry::Application.routes.draw do
     resources :items, shallow: true
     resources :contributions
   end
-  resources :contributions, only: [:create]
+  resources :contributions, only: [:new, :create]
 
-  resource :checkout
+  # resource :checkout
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

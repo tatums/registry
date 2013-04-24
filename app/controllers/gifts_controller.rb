@@ -1,6 +1,7 @@
 class GiftsController < ApplicationController
   respond_to :html
 
+  before_action :store_location, only: [:index]
 
   def index
     @cart = find_cart

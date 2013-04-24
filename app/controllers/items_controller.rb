@@ -8,13 +8,14 @@ class ItemsController < ApplicationController
       quantity = param[1][:quantity]
       @cart.add_item(gift: gift, quantity: quantity)
     end
-    redirect_to checkout_path
+    redirect_to new_contribution_path
   end
 
   def destroy
     @item = find_item
     @item.destroy
-    redirect_to checkout_path
+    flash[:notice] = 'Item was removed.'
+    redirect_to new_contribution_path
   end
 
 

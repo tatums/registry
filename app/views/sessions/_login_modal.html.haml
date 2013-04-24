@@ -1,0 +1,14 @@
+.modal.hide.fade
+
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
+    %h3 Login
+
+  .modal-body
+    %p You need to login.
+    =render 'sessions/form'
+
+  / .modal-footer
+  /   %a.btn{:href => "#"} Close
+  /   %a.btn.btn-primary{:href => "#"} Save changes
+

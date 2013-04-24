@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     if user = find_user(request.env["omniauth.auth"])
       session[:user_id] = user.id
-      redirect_to root_url
+      redirect_back("Hello #{user.full_name}. Login Successful")
     else
       flash.now[:alert] = "Invalid email or password"
       render "new"
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_back('Logout Successful')
   end
 
 private

@@ -1,29 +1,54 @@
-/##TODO Fix me - I'm Hackish
-=form_for([@cart, Item.new]) do |form|
+%h1 Gift Registry
 
-  %table.table.table-striped
-    %thead
-      %tr
-        %th
-        %th Title
-        %th Description
-        %th Requested
-        %th Remaining
-        %th Amount
-        %th Amount
-    %tbody
+.info
+  %p
+    We have registered at the stores below and have also created a way to contribute to our honeymoon in Hawaii. Finally, Tatum and I are saving for our dream home, so if by any chance you want to contribute to that instead, there's a little button for that at the bottom too.
+  %p
+    Thank you!
 
-      - @gifts.each do |gift|
+  %ul.inline-list
+    %li
+      =link_to image_tag('crate2.png', class: :fancy),
+        'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
+    %li
+      =link_to image_tag('macys2.png', class: :fancy),
+        'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
 
-        = form.fields_for 'gifts[]', gift do |gift_field|
-          %tr
-            %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
-            %td= link_to gift.title, gift
-            %td= link_to gift.description, gift
-            %td= gift.portions
-            %td= helper_portions_for(gift)
-            %td= number_to_currency gift.portion_size
+.gifts
+  =form_for([@cart, Item.new]) do |form|
 
-            %td= helper_field_for(gift_field, gift)
+    %table.table.table-striped
+      %thead
+        %tr
+          %th
+          %th Title
+          %th Description
+          %th Requested
+          %th Remaining
+          %th Amount
+          %th Amount
+      %tbody
 
-  =submit_tag 'Continue'
+        - @gifts.each do |gift|
+
+          = form.fields_for 'gifts[]', gift do |gift_field|
+            %tr
+              %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
+              %td= link_to gift.title, gift
+              %td= link_to gift.description, gift
+              %td= gift.portions
+              %td= helper_portions_for(gift)
+              %td= number_to_currency gift.portion_size
+
+              %td= helper_field_for(gift_field, gift)
+
+    =content_tag  :button, ('Checkout '+ content_tag(:i, nil, class: 'icon-caret-right') ).html_safe,
+                  class: 'pull-right', id: 'checkout-btn'
+
+
+-unless current_user
+  :javascript
+    $("button#checkout-btn").click(  function(e) {
+      e.preventDefault();
+      $('.modal').modal('show');
+    });

@@ -1,0 +1,30 @@
+%table.table.table-striped
+
+  %thead
+    %tr
+      %th
+      %th Title
+      %th Quantity
+      %th SubTotal
+      %th
+
+  %tbody
+    =render @cart.items
+
+  %tfoot
+    %tr
+      %td
+      %td
+      %td Total
+      %td= number_to_currency( @cart.items.map(&:sub_total).sum )
+      %td
+
+=link_to  content_tag(:i, nil, class: 'icon-caret-left')+' Back',
+          gifts_path, class: 'button pull-left'
+
+=form_for @contribution do |form|
+  =content_tag  :button, 'Complete',
+                class: 'pull-right button',
+                id: 'create-conrtibution'
+
+
