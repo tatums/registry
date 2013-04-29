@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require font-awesome
+ *= require fancybox/source/jquery.fancybox
  */
 
 // $visual-grid: true;
@@ -36,6 +37,6 @@ $hover-color:#d61835;
   @import "errors";
   @import "bs-tables";
   @import "bs-styles";
-  @import "fancybox/source/jquery.fancybox.css";
+
 
 
