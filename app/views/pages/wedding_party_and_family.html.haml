@@ -5,31 +5,29 @@
 
 .bio-row
   .bio
-    =image_tag 'jen_and_linus.jpg', class: :fancy
+    =link_to image_tag('jen_leslie_angie.jpg', class: :fancy), asset_path('jen_leslie_angie.jpg'), class: :fancybox
     %p
       Our Matron of Honor, Jennifer. Leslie's sister! The one and only! Animal lover and uber creative supermom. With trusted companion and destroyer of couches, Linus.
 
   .bio
-    =image_tag 'nate_and_kristin.jpg', class: :fancy
+    =link_to image_tag('nate_and_kristin.jpg', class: :fancy), asset_path('nate_and_kristin.jpg'), class: :fancybox
     %p
       Our Best Man, Nate. Tatum's brother! One of the nicest, funniest people you will ever meet. Really. We're not sure how he does it. And he can get you a toe. By 3 o'clock. With nail polish.
 
   .bio
-    =image_tag 'sumer3.jpg', class: :fancy
+    =link_to image_tag('sumer3.jpg', class: :fancy), asset_path('sumer3.jpg'), class: :fancybox
     %p
       Our lovely Reader for the ceremony, Tatum's sister Sumer! She's unceasingly generous, always there for family, and is an athlete, mom, and cook extrordinnaire.
-
 .bio-row
   .bio
-    =image_tag 'leslie_and_sandy.jpg', class: :fancy
+    =link_to image_tag('leslie_and_sandy.png', class: :fancy), asset_path('leslie_and_sandy.png'), class: :fancybox
     %p
       The Mother of the bride, Sandy.
 
   .bio
-    =image_tag 'terry_and_yvette2.jpg', class: :fancy
+    =link_to image_tag('terry_and_yvette2.jpg', class: :fancy), asset_path('terry_and_yvette2.jpg'), class: :fancybox
     %p
       The Father and Stepmother of the bride, Terry and Yvette.
-
   .bio
     %img{src: placeholder, class: :fancy}
     %p
@@ -37,11 +35,11 @@
 
 .bio-row
   .bio
-    %img{src: placeholder, class: :fancy}
+    =link_to image_tag('salazar_fam.jpg', class: :fancy), asset_path('salazar_fam.jpg'), class: :fancybox
     %p
       The Bostek-Salazars: Jennifer, her husband Lou, and their kids Rosie and Sid.
 
   .bio
-    =image_tag 'szymczaks.jpg', class: :fancy
+    =link_to image_tag('szymczaks.jpg', class: :fancy), asset_path('szymczaks.jpg'), class: :fancybox
     %p
       The Szymczaks: Sumer, her husband Eric, Nate's wife Kristen, Nate, Tatum, and Sumer and Eric's sons Ryder and Roenick.
