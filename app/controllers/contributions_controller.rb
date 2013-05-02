@@ -15,11 +15,14 @@ class ContributionsController < ApplicationController
 
   def create
     @cart = find_cart
-
     if current_user
       @cart.convert(current_user)
       flash[:notice] = 'Successfull'
     end
+    redirect_to thank_you_path
+  end
+
+  def thank_you
 
   end
 

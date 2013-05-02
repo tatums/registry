@@ -17,7 +17,7 @@ Registry::Application.routes.draw do
   get 'guest_book' =>               'pages#guest_book',               as: :guest_book
   get 'faq' =>                      'pages#faq',                      as: :faq
   get 'contact_us' =>               'pages#contact_us',               as: :contact_us
-
+  get 'thank_you' =>                'contributions#thank_you',        as: :thank_you
   resources :gifts
 
   get 'register' => 'users#new', as: :register
