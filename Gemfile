@@ -34,6 +34,7 @@ gem 'omniauth-facebook'
 gem 'neat'
 gem 'bourbon'
 gem "font-awesome-rails"
+gem 'newrelic_rpm'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
