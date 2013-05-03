@@ -13,5 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require google_maps_sensor
+//= require gmaps
+//= require google_analytics
 //= require fancybox/source/jquery.fancybox
 //= require_tree .

@@ -1,20 +1,31 @@
-%h1 Gift Registry
+%section.info
 
-.info
+  %h1 Gift Registry
+
+  .info
+    %p
+      We have registered at the stores below.
+
+    %ul.inline-list
+      %li
+        =link_to image_tag('crate2.png', class: :fancy),
+          'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
+      %li
+        =link_to image_tag('macys2.png', class: :fancy),
+          'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
+
+%hr
+
+%section.cart
+  %h1 Our Honeymoon
+
   %p
-    We have registered at the stores below and have also created a way to contribute to our honeymoon in Hawaii. Finally, Tatum and I are saving for our dream home, so if by any chance you want to contribute to that instead, there's a little button for that at the bottom too.
-  %p
+    We have also created a way to contribute to unforgettable experiences on our honeymoon in Hawaii. We can't wait to go!
+
+    Finally, Tatum and I are saving for our dream home, so if by any chance you would like to contribute to that instead, there's a little button for that at the bottom too.
+
     Thank you!
 
-  %ul.inline-list
-    %li
-      =link_to image_tag('crate2.png', class: :fancy),
-        'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
-    %li
-      =link_to image_tag('macys2.png', class: :fancy),
-        'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
-
-.gifts
   =form_for([@cart, Item.new]) do |form|
 
     %table.table.table-striped
