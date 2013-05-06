@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require font-awesome
  *= require fancybox/source/jquery.fancybox
  */
 
@@ -28,15 +27,15 @@ $hover-color:#d61835;
   @import "bourbon";
   @import "neat";
 
-  @import "foundation/foundation";
-  @import "layout";
+  @import "foundation/css/foundation.css";
+  @import "layout.css.scss";
 
 
-  @import "type";
-  @import "pages";
-  @import "errors";
-  @import "bs-tables";
-  @import "bs-styles";
+  @import "type.css.scss";
+  @import "pages.css.scss";
+  @import "errors.css.scss";
+  @import "bs-tables.css.scss";
+  @import "bs-styles.css.scss";
 
 
 
