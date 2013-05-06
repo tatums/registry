@@ -17,3 +17,8 @@
 //= require google_maps_sensor
 //= require gmaps
 //= require_tree .
+
+
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
