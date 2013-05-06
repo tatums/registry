@@ -16,6 +16,5 @@
 //= require fancybox/source/jquery.fancybox
 //= require google_maps_sensor
 //= require gmaps
+//= require registry
 //= require_tree .
-
-
