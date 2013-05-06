@@ -1,1 +1,17 @@
-thank_you.html.haml
+%h1 Thank you!
+%p
+  Your purchase is complete.
+
+=render partial: 'contributions/item', collection: @contribution.items
+
+
+
+%h2 Leave a personal message
+
+=form_for @contribution do |form|
+  =form.text_area :notes
+  =content_tag  :button, 'Send',
+                class: 'pull-right button',
+                id: 'create-conrtibution'
+
+

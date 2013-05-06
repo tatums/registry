@@ -62,6 +62,7 @@ Registry::Application.configure do
   #config.assets.precompile += %w( gmaps.js )
   config.assets.precompile += %w( fancybox/source/jquery.fancybox.css )
 
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

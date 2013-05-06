@@ -8,5 +8,6 @@ class Contribution
   belongs_to :user
   has_many :items
 
+  field :notes
 
 end

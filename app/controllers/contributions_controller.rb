@@ -16,14 +16,20 @@ class ContributionsController < ApplicationController
   def create
     @cart = find_cart
     if current_user
-      @cart.convert(current_user)
+      contribution = @cart.convert(current_user)
       flash[:notice] = 'Successfull'
     end
-    redirect_to thank_you_path
+    redirect_to thank_you_contribution_path(contribution)
   end
 
   def thank_you
+    @contribution = Contribution.find(params[:id])
+  end
 
+  def update
+    @contribution = Contribution.update(params[:contribution])
+    flash[:notice] = 'Your messages has been sent.'
+    redirect_to root_path
   end
 
 end

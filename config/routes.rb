@@ -17,7 +17,8 @@ Registry::Application.routes.draw do
   get 'guest_book' =>               'pages#guest_book',               as: :guest_book
   get 'faq' =>                      'pages#faq',                      as: :faq
   get 'contact_us' =>               'pages#contact_us',               as: :contact_us
-  get 'thank_you' =>                'contributions#thank_you',        as: :thank_you
+
+
   resources :gifts
 
   get 'register' => 'users#new', as: :register
@@ -34,49 +35,8 @@ Registry::Application.routes.draw do
     resources :items, shallow: true
     resources :contributions
   end
-  resources :contributions, only: [:new, :create]
+  resources :contributions, only: [:new, :create, :update] do
+    member {get 'thank_you'}
+  end
 
-  # resource :checkout
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

@@ -24,6 +24,7 @@ class Cart
     items.each do |item|
       item.update_attributes(cart: nil, contribution: contribution)
     end
+    return contribution
   end
 
 end
