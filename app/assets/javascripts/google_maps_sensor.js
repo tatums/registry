@@ -18,4 +18,4 @@ google.maps = google.maps || {};
   };
   var loadScriptTime = (new Date).getTime();
   getScript("http://maps.gstatic.com/intl/en_us/mapfiles/api-3/12/10/main.js");
-})();
+})
