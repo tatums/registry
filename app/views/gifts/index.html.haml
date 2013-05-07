@@ -44,9 +44,9 @@
 
           = form.fields_for 'gifts[]', gift do |gift_field|
             %tr
-              %td= link_to image_tag(gift.image.thumb.url, class: :fancy), gift
-              %td= link_to gift.title, gift
-              %td= link_to gift.description, gift
+              %td= image_tag(gift.image.thumb.url, class: :fancy)
+              %td= gift.title
+              %td= gift.description
               %td= gift.portions
               %td= helper_portions_for(gift)
               %td= number_to_currency gift.portion_size
