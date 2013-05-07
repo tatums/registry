@@ -16,4 +16,4 @@
 //= require fancybox/source/jquery.fancybox
 //= require registry
 //= require bootstrap
-//= gmaps
+//= require gmaps
