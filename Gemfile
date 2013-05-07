@@ -9,6 +9,8 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
   gem 'font-awesome-rails'
+  gem 'neat'
+  gem 'bourbon'
 end
 
 group :test, :development do
@@ -32,8 +34,7 @@ gem "omniauth"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
-gem 'neat'
-gem 'bourbon'
+
 
 gem 'newrelic_rpm'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
