@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require fancybox/source/jquery.fancybox
-// require google_maps_sensor
 //= require gmaps
+//= require google_maps_sensor
 //= require registry
-//= require_tree .
+//= require bootstrap
