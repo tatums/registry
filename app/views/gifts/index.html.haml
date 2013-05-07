@@ -33,7 +33,6 @@
         %tr
           %th
           %th Title
-          %th Description
           %th Requested
           %th Remaining
           %th Amount
@@ -46,7 +45,6 @@
             %tr
               %td= image_tag(gift.image.thumb.url, class: :fancy)
               %td= gift.title
-              %td= gift.description
               %td= gift.portions
               %td= helper_portions_for(gift)
               %td= number_to_currency gift.portion_size
