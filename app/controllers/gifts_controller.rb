@@ -23,6 +23,13 @@ class GiftsController < ApplicationController
   end
 
   def edit
+    @gift = Gift.find(params[:id])
+  end
+
+  def update
+    @gift = Gift.find(params[:id])
+    flash[:notice] = 'Gift was successfully updated.' if @gift.update_attributes(gift_params)
+    respond_with(@gift)
   end
 
   private

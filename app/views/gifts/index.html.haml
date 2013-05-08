@@ -43,7 +43,7 @@
         - @gifts.each do |gift|
 
           = form.fields_for 'gifts[]', gift do |gift_field|
-            %tr
+            =content_tag :tr, id: gift.id do
               %td= image_tag(gift.image.thumb.url, class: :fancy)
               %td= gift.title
               %td= gift.portions
