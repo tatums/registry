@@ -13,13 +13,12 @@ Registry::Application.routes.draw do
   get 'local_activities' =>         'pages#local_activities',         as: :local_activities
   get 'what_to_bring' =>            'pages#what_to_bring',            as: :what_to_bring
   get 'partners_in_crime' =>        'pages#partners_in_crime',        as: :partners_in_crime
-  get 'registry' =>                 'pages#registry',                 as: :registry
   get 'guest_book' =>               'pages#guest_book',               as: :guest_book
   get 'faq' =>                      'pages#faq',                      as: :faq
   get 'contact_us' =>               'pages#contact_us',               as: :contact_us
 
 
-  resources :gifts
+  resources :gifts, :path => 'registry'
 
   get 'register' => 'users#new', as: :register
   resources :users, except: :new
