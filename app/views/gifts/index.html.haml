@@ -29,7 +29,7 @@
       %thead
         %tr
           %th
-          %th Title
+          %th Description
           %th Requested
           %th Remaining
           %th Amount
@@ -40,7 +40,7 @@
 
           = form.fields_for 'gifts[]', gift do |gift_field|
             =content_tag :tr, id: gift.id do
-              %td= image_tag(gift.image.thumb.url, class: :fancy)
+              %td.img= image_tag(gift.image.thumb.url, class: :fancy)
               %td= gift.title
               %td= gift.portions
               %td= helper_portions_for(gift)
