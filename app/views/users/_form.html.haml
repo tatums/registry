@@ -18,6 +18,8 @@
   .field
     = f.label :email
     =f.text_field :email, placeholder: 'Email'
+  .field
+    = f.label :password
+    =f.password_field :password, placeholder: '******'
   .actions
-    =f.submit 'Login'
-
+    =f.submit 'Register'

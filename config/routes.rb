@@ -21,7 +21,7 @@ Registry::Application.routes.draw do
   resources :gifts, :path => 'registry'
 
   get 'register' => 'users#new', as: :register
-  resources :users, except: :new
+  resources :users, except: [:index]
 
   get 'login' => 'sessions#new', as: :login
   delete 'logout/:id' => 'sessions#destroy', as: :logout
@@ -34,8 +34,17 @@ Registry::Application.routes.draw do
     resources :items, shallow: true
     resources :contributions
   end
+
+
   resources :contributions, only: [:new, :create, :update] do
     member {get 'thank_you'}
   end
+
+
+  namespace :admin do
+    resources :users
+  end
+
+
 
 end

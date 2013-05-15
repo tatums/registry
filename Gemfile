@@ -17,11 +17,12 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem 'faker'
   gem 'pry-rails'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 gem 'jquery-rails'
 gem 'haml-rails'
-#gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
 gem 'unicorn'
 gem 'foreman'
 gem 'carrierwave'
@@ -33,7 +34,7 @@ gem "figaro"
 gem "omniauth"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 
 gem 'newrelic_rpm'
@@ -43,14 +44,3 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'

@@ -1,0 +1,9 @@
+%dl
+  %dt Users
+  -@users.each do |user|
+
+    =content_tag :dd do
+      =user.id
+      =user.full_name
+      =user.email
+      =user.provider
