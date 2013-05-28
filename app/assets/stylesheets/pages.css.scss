@@ -4,3 +4,29 @@ img.wrap{
 }
 
 td.img{ width: 175px; }
+
+
+
+.registry li a{
+    text-indent: -9999px;
+    width: 160px;
+    height: 112px;
+    padding:5px;
+    border:1px solid #ccc;
+
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
+    @include box-shadow(0 0 1px 1px hsla(0, 0%, 0%, 0.10));
+}
+
+.crate a{
+    background-image:url( asset_path('crate2.png'));
+  }
+
+.sur a{
+    background-image:url( asset_path('surlatable.png'));
+  }
+
+

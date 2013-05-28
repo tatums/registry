@@ -2,13 +2,11 @@
 
   %h1 Gift Registry
 
-  %ul.inline-list
-    %li
-      =link_to image_tag('crate2.png', class: :fancy),
-        'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
-    %li
-      =link_to image_tag('surlatable.png', class: :fancy),
-        'http://www.surlatable.com/registry/giftRegistryList.jsp?id=200785513931'
+  %ul.inline-list.registry
+    %li.crate
+      =link_to 'Create & Barrel', 'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414'
+    %li.sur
+      =link_to "Sur la' Table", 'http://www.surlatable.com/registry/giftRegistryList.jsp?id=200785513931'
 
 
 %hr
