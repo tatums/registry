@@ -1,17 +1,20 @@
 %h1 Thank you!
 %p
-  Your purchase is complete.
-
-=render partial: 'contributions/item', collection: @contribution.items
+  Your purchase is complete. You can either bring a check to the wedding or mail it to:
+%p
+  Terry Fitzpatrick
+  %br
+  P.O. Box 2002
+  %br
+  Birmingham, MI 48025.
+%p.bold
+  Thank you for making our honeymoon so special!
 
 
 
 %h2 Leave a personal message
-
 =form_for @contribution do |form|
-  =form.text_area :notes
+  =form.text_area :notes, class: :personal_message
   =content_tag  :button, 'Send',
                 class: 'pull-right button',
                 id: 'create-conrtibution'
-
-

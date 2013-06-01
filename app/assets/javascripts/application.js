@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require fancybox/source/jquery.fancybox
 //= require registry
 //= require bootstrap
