@@ -4,8 +4,8 @@ class User
 
   has_many :contributions
   #validates :first, :last, :email, presence: true
-  validates :email, uniqueness: {scope: :provider}
-  before_save :encrypt_password
+  #validates :email, uniqueness: {scope: :provider}
+  #before_save :encrypt_password
 
   field :first
   field :last
