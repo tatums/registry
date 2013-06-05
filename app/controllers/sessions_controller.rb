@@ -24,7 +24,7 @@ private
     if auth
       User.find_by(provider: auth["provider"], uid: auth["uid"]) || User.create_with_omniauth(auth)
     else
-      User.find_by(email: params[:email])
+      User.find_by(email: params[:email]).try(:authenticate, params[:password])
     end
   end
 
