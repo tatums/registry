@@ -35,11 +35,7 @@ gem "omniauth"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'bcrypt-ruby', :require => 'bcrypt'
-gem 'postmark-rails'
-
 gem 'newrelic_rpm'
-#gem 'client_side_validations', :git => 'git@github.com:bcardarella/client_side_validations.git', :branch => 'rails-4.0-quick-fixes'
-
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'

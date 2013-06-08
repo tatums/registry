@@ -166,12 +166,6 @@ GEM
       omniauth-oauth (~> 1.0)
     origin (1.0.11)
     polyglot (0.3.3)
-    postmark (1.0.0)
-      json
-      rake
-    postmark-rails (0.5.0)
-      actionmailer
-      postmark (~> 1.0)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -274,7 +268,6 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   omniauth-twitter
-  postmark-rails
   pry-rails
   rails (= 4.0.0.beta1)
   rspec-rails (~> 2.0)
