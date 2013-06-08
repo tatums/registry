@@ -32,12 +32,11 @@ class User
       user.uid                    = auth.uid
       user.first                  = auth.info.name
       user.last                   = auth.info.name
+      user.email                  = pass
       user.name                   = auth.info.name
       user.avatar                 = auth.info.image
       user.oauth_token            = auth.credentials.token
       user.oauth_expires_at       = Time.now+15.days
-      # user.password               = pass
-      # user.password_confirmation  = pass
     end
   end
 
