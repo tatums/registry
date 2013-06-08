@@ -5,10 +5,23 @@
     %h3 Login
 
   .modal-body
-    %p You will need to login with Facbook or Twitter.
-    =render 'sessions/form'
+    .login-section
 
-  / .modal-footer
-  /   %a.btn{:href => "#"} Close
-  /   %a.btn.btn-primary{:href => "#"} Save changes
+      %p Enter your name and email address below to continue.
+      %p
+        =render 'users/form'
+
+    %hr
+
+    .login-section
+
+      =link_to "/auth/facebook" do
+        %button.small
+          %i.icon-facebook-sign.icon-2x
+          Sign in with Facebook
+
+      =link_to "/auth/twitter" do
+        %button.small
+          %i.icon-twitter-sign.icon-2x
+          Sign in with Twitter
 

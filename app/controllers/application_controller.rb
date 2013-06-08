@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :find_cart, :store_location
 
+  before_action :new_user
+
   def require_user
     unless current_user
       store_location
@@ -20,6 +22,11 @@ class ApplicationController < ActionController::Base
   end
 
 private
+
+  def new_user
+    @user = User.new
+  end
+
   def cart_id
     session[:cart_id] ||= Cart.create!.id
   end

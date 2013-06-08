@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  respond_to :html
+
   before_action :require_user, except: [:new, :create]
 
 
@@ -8,14 +8,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    flash[:notice] = 'User was successfully created.' if @user.save
-    respond_with(@user, location: root_path)
+    @user = User.find_or_initialize_by(user_params)
+    respond_to do |format|
+      format.js {}
+    end
   end
 
 
   private
     def user_params
-      params.require(:user).permit(:first, :last, :email, :password, :password_confirmation)
+      params.require(:user).permit(:first, :last, :email)
     end
 end

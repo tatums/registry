@@ -9,6 +9,3 @@
       Logged in as:
       = current_user.full_name + " | "
       = link_to 'Logout', logout_path(current_user), method: :delete
-    -else
-      = link_to 'Login', login_path
-      = link_to 'Register', new_user_path

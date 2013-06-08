@@ -29,10 +29,8 @@ class OfferingsController < ApplicationController
     respond_to do |format|
       if @offering.save
         format.html { redirect_to @offering, notice: 'Offering was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @offering }
       else
         format.html { render action: 'new' }
-        format.json { render json: @offering.errors, status: :unprocessable_entity }
       end
     end
   end

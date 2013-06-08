@@ -6,6 +6,7 @@ class GiftsController < ApplicationController
   def index
     @cart = find_cart
     @gifts = Gift.all.to_a
+    @user = User.new
   end
 
   def new

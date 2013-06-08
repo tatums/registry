@@ -1,12 +1,10 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
-  include ActiveModel::SecurePassword
 
-  has_secure_password
   has_many :contributions
 
-  validates_uniqueness_of :email
+  validates :email, :first, :last, presence: true
 
   field :first
   field :last
@@ -18,7 +16,6 @@ class User
   field :oauth_token
   field :oauth_expires_at, type: DateTime
 
-  field :password_digest
 
   def full_name
     if provider
@@ -39,8 +36,8 @@ class User
       user.avatar                 = auth.info.image
       user.oauth_token            = auth.credentials.token
       user.oauth_expires_at       = Time.now+15.days
-      user.password               = pass
-      user.password_confirmation  = pass
+      # user.password               = pass
+      # user.password_confirmation  = pass
     end
   end
 

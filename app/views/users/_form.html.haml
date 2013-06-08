@@ -1,29 +1,9 @@
-= form_for @user do |f|
-
-  - if @user.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@user.errors.count, "error")
-        prohibited this offering from being saved:
-      %ul
-        - @user.errors.full_messages.each do |msg|
-          %li= msg
+= form_for @user, remote: true, :url => user_path(@user), method: :post do |f|
 
   .field
-    = f.label :first
-    = f.text_field :first, placeholder: 'First'
+    =f.text_field :first, placeholder: 'First'
+    =f.text_field :last,  placeholder: 'Last'
   .field
-    = f.label :last
-    =f.text_field :last, placeholder: 'Last'
-  .field
-    = f.label :email
     =f.text_field :email, placeholder: 'Email'
-  .field
-    = f.label :password
-    =f.password_field :password
-  .field
-    = f.label :password_confirmation
-    =f.password_field :password_confirmation
-
   .actions
-    =f.submit 'Register'
+    =f.submit 'Continue', class: 'small button'

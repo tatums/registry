@@ -21,9 +21,10 @@ Registry::Application.routes.draw do
   resources :gifts, :path => 'registry'
 
   get 'register' => 'users#new', as: :register
-  resources :users, except: [:index]
 
-  get 'login' => 'sessions#new', as: :login
+  resources :users#, except: [:index]
+
+  # get 'login' => 'sessions#new', as: :login
   delete 'logout/:id' => 'sessions#destroy', as: :logout
 
   resources :sessions, only: [:create]
