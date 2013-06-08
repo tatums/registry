@@ -27,12 +27,11 @@ class User
 
   def self.create_with_omniauth(auth)
     create! do |user|
-      pass = SecureRandom.urlsafe_base64
       user.provider               = auth.provider
       user.uid                    = auth.uid
-      user.first                  = auth.info.name
-      user.last                   = auth.info.name
-      user.email                  = pass
+      user.first                  = "First #{auth.provider}"
+      user.last                   = "Last #{auth.provider}"
+      user.email                  = "none@#{auth.provider}.com"
       user.name                   = auth.info.name
       user.avatar                 = auth.info.image
       user.oauth_token            = auth.credentials.token

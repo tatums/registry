@@ -1,12 +1,9 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
   %body
     %h1
-      New Message
-    %p
-      You have a message form #{@user.full_name}.
-      %br/
+      Personal message form #{@user.full_name}.
     %p
       =@contribution.notes

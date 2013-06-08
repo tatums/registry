@@ -4,7 +4,8 @@ class UserMailer < ActionMailer::Base
   def personal_message(user, contribution)
     @user = user
     @contribution = contribution
-    mail(:to => 'tatum@ashlandstudios.com', :subject => "Welcome to My Awesome Site")
+    mail( to:       'tatum@ashlandstudios.com',
+          subject:  "Personal Message")
   end
 
 end
