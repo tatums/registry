@@ -28,10 +28,16 @@ class ContributionsController < ApplicationController
 
   def update
     @contribution = Contribution.find(params[:id])
-    @contribution.update(params[:contribution])
+    @contribution.update(contribution_params)
     UserMailer.personal_message(current_user, @contribution).deliver
     flash[:notice] = 'Your messages has been sent.'
     redirect_to root_path
+  end
+
+private
+
+  def contribution_params
+    params.require(:contribution).permit!
   end
 
 end
