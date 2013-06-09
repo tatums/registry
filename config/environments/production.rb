@@ -63,6 +63,10 @@ Registry::Application.configure do
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   config.assets.precompile += %w( fancybox/source/jquery.fancybox.css )
 
+  config.assets.precompile += ["fontawesome-webfont.ttf",
+                               "fontawesome-webfont.eot",
+                               "fontawesome-webfont.svg",
+                               "fontawesome-webfont.woff"]
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
