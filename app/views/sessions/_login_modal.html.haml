@@ -2,26 +2,23 @@
 
   .modal-header
     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} &times;
-    %h3 Login
+    %h2 Login
 
   .modal-body
     .login-section
 
-      %p Enter your name and email address below to continue.
-      %p
-        =render 'users/form'
+      %p.small Enter your name and email address below to continue.
+      =render 'users/form'
 
-    %hr
+    .login-section.divider
+      %h2 OR
 
-    .login-section
-
+    .login-section.social
       =link_to "/auth/facebook" do
-        %button.small
-          %i.icon-facebook-sign.icon-2x
-          Sign in with Facebook
+        %i.icon-facebook-sign.icon-2x
+        Sign in with Facebook
 
+    .login-section.social
       =link_to "/auth/twitter" do
-        %button.small
-          %i.icon-twitter-sign.icon-2x
-          Sign in with Twitter
-
+        %i.icon-twitter-sign.icon-2x
+        Sign in with Twitter

@@ -30,7 +30,7 @@ class ContributionsController < ApplicationController
     @contribution = Contribution.find(params[:id])
     @contribution.update_attributes(contribution_params)
     UserMailer.personal_message(current_user, @contribution).deliver
-    flash[:notice] = 'Your messages has been sent.'
+    flash[:notice] = 'Your message has been sent.'
     redirect_to root_path
   end
 
