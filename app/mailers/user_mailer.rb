@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def personal_message(user, contribution)
     @user = user
     @contribution = contribution
-    mail( to:       'tatum@ashlandstudios.com',
+    mail( to:       %w(tatum@ashlandstudios.com lbfitzpatrick@googlemail.com),
           subject:  "Personal Message")
   end
 
