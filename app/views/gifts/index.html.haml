@@ -4,10 +4,11 @@
   %p
     We have registered at Crate & Barrel and Sur la Table.
   %ul.inline-list.registry
-    %li.crate
-      =link_to 'Create & Barrel', 'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414', target: "_blank"
     %li.sur
       =link_to "Sur la' Table", 'http://www.surlatable.com/registry/giftRegistryList.jsp?id=200785513931', target: "_blank"
+    %li.crate
+      =link_to 'Create & Barrel', 'http://www.crateandbarrel.com/Gift-Registry/Leslie-Fitzpatrick-and-Tatum-Szymczak/r5022414', target: "_blank"
+
 
 
 %hr
@@ -39,7 +40,8 @@
 
           = form.fields_for 'gifts[]', gift do |gift_field|
             =content_tag :tr, id: gift.id do
-              %td.img= image_tag(gift.image.thumb.url, class: :fancy)
+              /%td.img= image_tag(gift.image.thumb.url, class: :fancy)
+              %td.img= image_tag(gift.image.url, class: :fancy)
               %td= gift.title
               %td= gift.portions
               %td= helper_portions_for(gift)
