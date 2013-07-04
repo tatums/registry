@@ -41,7 +41,7 @@
           = form.fields_for 'gifts[]', gift do |gift_field|
             =content_tag :tr, id: gift.id do
               /%td.img= image_tag(gift.image.thumb.url, class: :fancy)
-              %td.img= image_tag(gift.image.url, class: :fancy)
+              %td.img= image_tag(gift.image.url, class: :fancy, id: gift.image_filename.split('.').first)
               %td= gift.title
               %td= gift.portions
               %td= helper_portions_for(gift)
