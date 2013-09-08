@@ -10,4 +10,13 @@ class Contribution
 
   field :notes
 
+
+  def attr_for_user(arg)
+    if user
+      user.send(arg)
+    else
+      'unknown'
+    end
+  end
+
 end
