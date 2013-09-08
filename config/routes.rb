@@ -44,7 +44,8 @@ Registry::Application.routes.draw do
 
   namespace :admin do
     resources :users
-    resources :contributions
+    resources :contributions, only: :index
+    resources :gifts ,only: :index
   end
 
 

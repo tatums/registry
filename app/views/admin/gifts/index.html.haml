@@ -1,0 +1,16 @@
+-@gifts.each do |gift|
+  =content_tag :h5 do
+    =gift.title
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Quantity
+        %th User
+
+    %tbody
+    -gift.items.select { |i| i.contribution }.each do |item|
+      %tr
+        %td=item.quantity.to_s
+        %td=item.contribution.attr_for_user(:full_name)
+
