@@ -13,6 +13,7 @@
         %th Quantity
         %th Item Cost
         %th Item Total
+        %th Activity
         %th User
 
     %tbody
@@ -21,5 +22,6 @@
         %td=item.quantity.to_s
         %td=number_to_currency item.gift.portion_size
         %td=number_to_currency(item.quantity * item.gift.portion_size)
+        %td=item.gift.title
         %td=item.contribution.attr_for_user(:full_name)
 
