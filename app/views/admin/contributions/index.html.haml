@@ -1,16 +1,13 @@
 -@contributions.each do |contribution|
 
-  =content_tag :div do
-
+  =content_tag :h5 do
     =contribution.attr_for_user(:full_name)
     =contribution.attr_for_user(:email)
     =contribution.attr_for_user(:provider)
 
 
-    %ul
-      -contribution.items.each do |item|
-
-
-        =content_tag :li do
-          =item.id
-          =item.gift.title
+  %ul
+    -contribution.items.each do |item|
+      =content_tag :li do
+        =item.quantity
+        =item.gift.title
