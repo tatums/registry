@@ -6,11 +6,16 @@
     %thead
       %tr
         %th Quantity
+        %th Item Cost
+        %th Item Total
         %th User
 
     %tbody
     -gift.items.select { |i| i.contribution }.each do |item|
       %tr
         %td=item.quantity.to_s
+        %td=number_to_currency item.gift.portion_size
+        %td=number_to_currency(item.quantity * item.gift.portion_size)
         %td=item.contribution.attr_for_user(:full_name)
+
 

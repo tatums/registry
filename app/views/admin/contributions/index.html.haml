@@ -6,8 +6,20 @@
     =contribution.attr_for_user(:provider)
 
 
-  %ul
+
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Quantity
+        %th Item Cost
+        %th Item Total
+        %th User
+
+    %tbody
     -contribution.items.each do |item|
-      =content_tag :li do
-        =item.quantity
-        =item.gift.title
+      %tr
+        %td=item.quantity.to_s
+        %td=number_to_currency item.gift.portion_size
+        %td=number_to_currency(item.quantity * item.gift.portion_size)
+        %td=item.contribution.attr_for_user(:full_name)
+
